@@ -1,0 +1,2 @@
+# kod-coplugu
+Gereksiz kodlar
