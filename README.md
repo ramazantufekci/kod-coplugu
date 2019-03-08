@@ -1,2 +1,2 @@
 # kod-coplugu
-Gereksiz kodlar
+Lazım olduğunuda elimin altında durmasını istediğim kodlar
