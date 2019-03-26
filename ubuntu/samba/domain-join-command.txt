@@ -1,5 +1,7 @@
 net join -U"administrator%Password1"
-
+/**
+*Dosya iznini active directory den grup oluşturup gruba izin verirsen daha kolay olur
+*/
 chown root:"DOMAIN\Grup" dosya
 
 chmod g+rw dosya
