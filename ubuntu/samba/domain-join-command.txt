@@ -1,1 +1,5 @@
 net join -U"administrator%Password1"
+
+chown root:"DOMAIN\Grup" dosya
+
+chmod g+rw dosya
