@@ -1,0 +1,186 @@
+    1  apt-get update
+    2  sudo apt-get update
+    3  sudo apt-get upgrade
+    4  sudo apt-get update
+    5  sudo apt-get upgrade
+    6  sudo apt-get install samba
+    7  smbd -b
+    8  sudo nano /etc/resolv.conf 
+    9  sudo nano /etc/hosts
+   10  mv /etc/hosts /etc/hosts.bak
+   11  sudo mv /etc/hosts /etc/hosts.bak
+   12  sudo nano /etc/hosts
+   13  ls /etc/
+   14  ls /etc/samba/
+   15  nano /etc/samba/smb.conf 
+   16  sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.old
+   17  ls /etc/pam.d/
+   18  cat /etc/pam.d/samba
+   19  cat /etc/pam.d/common-auth 
+   20  cat /etc/pam.d/samba
+   21  cat /etc/pam.d/common-account 
+   22  nao /etc/pam.d/samba
+   23  sudo nano /etc/pam.d/samba
+   24  cat /etc/hostname 
+   25  sudo nano /etc/krb5.conf
+   26  ls /etc/
+   27  sudo nano /etc/nsswitch.conf 
+   28  samba-tool domain join
+   29  sudo samba-tool domain join ramazan.local
+   30  sudo samba-tool domain join dc2019.ramazan.local
+   31  ping ramazan.local
+   32  sudo samba-tool domain join ramazan
+   33  sudo samba-tool domain join dc2019
+   34  sudo samba-tool domain join ramazan
+   35  sudo samba-tool domain join ramazan.local
+   36  sudo nano /etc/samba/smb.conf
+   37  sudo samba-tool domain join ramazan.local
+   38  sudo samba-tool domain join dc2019.ramazan.local
+   39  smbd -b
+   40  ls /usr/lib/x86_64-linux-gnu/samba/
+   41  sudo apt-get install winbind 
+   42  ps aux
+   43  systemctl stop smbd.service
+   44  systemctl status smbd.service
+   45  systemctl stop nmbd.service
+   46  sudo apt-get install winbind 
+   47* 
+   48  ps aux
+   49  ls /usr/lib/x86_64-linux-gnu/samba/
+   50  sudo samba-tool domain join dc2019.ramazan.local
+   51  sudo samba-tool domain join ramazan.local
+   52  sudo samba-tool domain join ramazan
+   53  ls /etc/pam.d/
+   54  ls /etc/pam.d/samba 
+   55  cat /etc/pam.d/samba 
+   56  ls /usr/lib/x86_64-linux-gnu/krb5/
+   57  ls /usr/lib/x86_64-linux-gnu/krb5/plugins/
+   58  ls /usr/lib/x86_64-linux-gnu/samba/idmap/
+   59  net
+   60  net join
+   61  sudo net join
+   62  sudo net join --help
+   63  sudo net join -U"administrator%Password1"
+   64  ping ortayakarisik2
+   65  cat /etc/hosts
+   66  sudo nano /etc/hosts
+   67  ifconfig
+   68  wbinfo -u
+   69  wbinfo -
+   70  wbinfo 
+   71  wbinfo -u
+   72  wbinfo -u ramazan.local
+   73  sudo wbinfo -u
+   74  sudo wbinfo -g
+   75  sudo net join -U"administrator%Password1"
+   76  sudo apt-get install libnss-winbind 
+   77  sudo apt-get install libpam-winbind 
+   78  sudo systemctl stop winbind.service 
+   79  sudo systemctl restart smbd.service
+   80  sudo systemctl start winbind.service 
+   81  sudo kinit
+   82  sudo net ads join
+   83  sudo net ads join -U"administrator%Password1"
+   84  sudo net ads join -S WIN2K3 -U"administrator%Password1"
+   85  sudo nano /etc/hosts
+   86  sudo net ads join -U"administrator%Password1"
+   87  sudo nano /etc/resolv.conf 
+   88  systemd --reserve-dns
+   89  sudo cat /etc/resolv.conf 
+   90  systemd-resolve --status
+   91  ifconfig 
+   92  systemd-resolve --status
+   93  sudo systemctl restart networkd-dispatcher.service 
+   94  systemd-resolve --status
+   95  nano /etc/network/interfaces 
+   96  nano /etc/networks
+   97  networkctl 
+   98  networkctl 2
+   99  networkctl --help
+  100  netplan 
+  101  netplan --debug
+  102  netplan --debug apply
+  103  sudo netplan --debug apply
+  104  sudo nano /run/systemd/network/10-netplan-eth0.network
+  105  systemd-resolve --status
+  106  wbinfo -u
+  107  sudo pam-auth-update
+  108  ls /var/lib/samba/usershares/
+  109  sudo ls /var/lib/samba/usershares/
+  110  sudo ls /var/lib/samba/pri
+  111  sudo ls /var/lib/samba/private/
+  112  sudo nano /var/lib/samba/usershares/deneme
+  113  mkdir ayhan
+  114  sudo nano /var/lib/samba/usershares/deneme
+  115  sudo systemctl restart smbd.service 
+  116  cat /etc/passwd
+  117  wbinfo -u
+  118  wbinfo -g
+  119  getent passwd
+  120  sudo nano /etc/samba/smb.conf
+  121  sudo systemctl restart smbd.service 
+  122  sudo systemctl restart nmbd.service 
+  123  sudo systemctl restart winbind.service 
+  124  wbinfo -g
+  125  getent passwd
+  126  wbinfo -g
+  127  ls
+  128  chown root:"@RAMAZAN+Domain Users" ayhan
+  129  chown root:"@RAMAZAN+domain users" ayhan
+  130  wbinfo -g
+  131  chown root:"RAMAZAN\domain users" ayhan
+  132  sudo chown root:"RAMAZAN\domain users" ayhan
+  133  ls -al
+  134  sudo chmod g+rw ayhan/
+  135  sudo cp /var/lib/samba/usershares/ayhan /var/lib/samba/usershares/bekle
+  136  sudo cp /var/lib/samba/usershares/deneme /var/lib/samba/usershares/bekle
+  137  sudo nano /var/lib/samba/usershares/bekle
+  138  mkdir bekle
+  139  chown root:"RAMAZAN\DBDR" bekle
+  140  sudo chown root:"RAMAZAN\DBDR" bekle
+  141  sudo chmod g+rw bekle
+  142  sudo chown root:root ayhan
+  143  sudo systemctl restart smbd.service 
+  144  sudo systemctl restart nmbd.service 
+  145  sudo systemctl restart winbind.service 
+  146  sudo nano /etc/samba/smb.conf
+  147  history >yedekhistory
+  148  sudo apt-get install git
+  149  git
+  150  git clone https://github.com/ramazantufekci/kod-coplugu.git
+  151  mkdir kod-coplugu/ubuntu/samba
+  152  ls -al
+  153  mv yedekhistory kod-coplugu/ubuntu/samba/history
+  154  sudo cp /etc/nsswitch.conf kod-coplugu/ubuntu/samba/ 
+  155  sudo cp /etc/krb5.conf kod-coplugu/ubuntu/samba/ 
+  156  sudo cp /etc/samba/smb.conf kod-coplugu/ubuntu/samba/ 
+  157  ls /etc/
+  158  ls -al /etc/
+  159  sudo cp /etc/resolv.conf kod-coplugu/ubuntu/samba/ 
+  160  sudo cp /etc/hosts kod-coplugu/ubuntu/samba/ 
+  161  sudo find /etc -mtime -1 -print
+  162  sudo cp /etc/pam.d/* kod-coplugu/ubuntu/samba/ 
+  163  ls kod-coplugu/ubuntu/samba/
+  164  ls /etc/pam.d/
+  165  ls /etc/pam.d/samba 
+  166  ls -al /etc/pam.d/samba 
+  167  cat /etc/pam.d/samba 
+  168  rm kod-coplugu/ubuntu/samba/atd
+  169  rm kod-coplugu/ubuntu/samba/chpasswd 
+  170  rm kod-coplugu/ubuntu/samba/chfn
+  171  ls -al /etc/pam.d/samba 
+  172  ls -al /etc/pam.d/
+  173  ls kod-coplugu/ubuntu/samba/
+  174  sudo rm kod-coplugu/ubuntu/samba/atd
+  175  sudo rm kod-coplugu/ubuntu/samba/chfn
+  176  sudo rm kod-coplugu/ubuntu/samba/chsh
+  177  sudo rm kod-coplugu/ubuntu/samba/common-session
+  178  sudo rm kod-coplugu/ubuntu/samba/cron
+  179  sudo rm kod-coplugu/ubuntu/samba/history 
+  180  sudo rm kod-coplugu/ubuntu/samba/hosts
+  181  sudo rm kod-coplugu/ubuntu/samba/login
+  182  ls
+  183  ls -al
+  184  history >kod-coplugu/ubuntu/samba/
+  185  sudo history >kod-coplugu/ubuntu/samba/
+  186  history >kod-coplugu/ubuntu/samba/historyt

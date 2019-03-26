@@ -1,0 +1,1 @@
+net join -U"administrator%Password1"

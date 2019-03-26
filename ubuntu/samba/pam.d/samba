@@ -1,0 +1,9 @@
+@include common-auth
+@include common-account
+@include common-session-noninteractive
+auth	sufficient	pam_unix.so
+auth	sufficient	pam_winbind.so
+auth	sufficient	pam_ldap.so
+account	sufficient	pam_unix.so
+account	sufficient	pam_winbind.so
+account	sufficient	pam_ldap.so
