@@ -1,5 +1,5 @@
 #Komut satırı
-> Komut satırında kullanıcıyı local admine ekler
+> Active directory kullanıcısını local admine ekler
 
 ```echo net localgroup administrators DC\%username% /ADD>deneme.bat && deneme.bat```
 
