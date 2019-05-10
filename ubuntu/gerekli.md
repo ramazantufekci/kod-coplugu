@@ -3,3 +3,9 @@
 
 ## N gün değişen dosyaları gösterir
 ```find /etc -mtime -1 -print```
+
+## Debian mount.cifs
+> paket olarak smbfs yi değil cifs-utils kurmalısın daha sonra
+> aşağıdaki komutu vererek bağlantıyı yapabilirsin
+```mount.cifs //server/paylasim /mnt/istediğinDosya```
+> Bu kadar ama paylaşıma ulaşman için senden şifre isteyebilir.
