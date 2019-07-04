@@ -6,3 +6,6 @@
 > Local kullanıcı oluşturur ve onu local admine ekler.
 
 ```net user kullanici password /ADD && net localgroup administrators pcname\kullanici /ADD```
+> Komut satırından uzak masaüstünü açar. Sondaki bir Güvenlik seviyesini ayarlar(Aynı ağda olanlar bağlansın şu kullanıcı bağlansın gibi) 
+
+```wmic /node:clientc rdtoggle where AllowTSConnections="0" call SetAllowTSConnections "1"```
