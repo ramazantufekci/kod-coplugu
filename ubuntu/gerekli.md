@@ -9,3 +9,6 @@
 > aşağıdaki komutu vererek bağlantıyı yapabilirsin
 ```mount.cifs //server/paylasim /mnt/istediğinDosya```
 > Bu kadar ama paylaşıma ulaşman için senden şifre isteyebilir.
+
+## Find komutu ile bulunan dosyaları belirtilen dizine taşır.
+```find ~/dokuman/ -name "*docx" -exec mv {} ~/eski/ \;```
