@@ -10,5 +10,8 @@
 ```mount.cifs //server/paylasim /mnt/istediğinDosya```
 > Bu kadar ama paylaşıma ulaşman için senden şifre isteyebilir.
 
+
+```mount.cifs //server/paylasim /mnt/istediğinDosya -o user=paylasim kullanıcı ismi,pass=şifre,dom=domain.local```
+
 ## Find komutu ile bulunan dosyaları belirtilen dizine taşır.
 ```find ~/dokuman/ -name "*docx" -exec mv {} ~/eski/ \;```
