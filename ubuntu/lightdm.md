@@ -1,4 +1,8 @@
-# lightdm.conf
+# pardus da oturum açmadan direk uzakmasaüstü yapmak için dosya yolu
+
+> /etc/lightdm/lightdm.conf
+
+## lightdm.conf
 display-setup-script=/etc/init.d/ekran.sh
 
 ---
