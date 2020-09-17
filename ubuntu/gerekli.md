@@ -15,3 +15,6 @@
 
 ## Find komutu ile bulunan dosyaları belirtilen dizine taşır.
 ```find ~/dokuman/ -name "*docx" -exec mv {} ~/eski/ \;```
+
+## Ayar dosyalarındaki # siz satırları getirir.
+```grep -v "^#" /etc/squid/squid.conf | sed -e '/^$/d'```
