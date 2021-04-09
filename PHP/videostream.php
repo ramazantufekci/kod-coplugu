@@ -124,3 +124,11 @@ class VideoStream
         $this->end();
     }
 }
+
+/*
+*örnek kullanım
+*<?php
+include_once 'videostream.php';
+$stream = new VideoStream("video.mp4");
+$stream->start();exit();
+*/
