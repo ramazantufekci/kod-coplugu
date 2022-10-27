@@ -18,3 +18,6 @@
 
 ## Ayar dosyalarındaki # siz satırları getirir.
 ```grep -v "^#" /etc/squid/squid.conf | sed -e '/^$/d'```
+
+## Dosya içinde arama
+find . -iname '*conf' | xargs grep 'kelime' -sl
