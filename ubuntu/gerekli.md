@@ -21,3 +21,9 @@
 
 ## Dosya içinde arama
 ```find . -iname '*conf' | xargs grep 'kelime' -sl```
+
+## dosya için izinleri düzenle
+```find . -type f -exec chmod 644 {} +```
+
+## klasör için izinleri düzenle
+```find . -type d -exec chmod 755 {} +```
