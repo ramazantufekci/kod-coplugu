@@ -12,3 +12,22 @@ delete t1 from fonlar t1 inner join fonlar t2 where t1.id<t2.id and t1.adi=t2.ad
 ```mysql
 truncate fonlar;
 ```
+## wordpress  Uncaught mysqli_sql_exception: Table 'wp_options' is marked as crashed and last (automatic?) repair failed in hatasının çözümü
+
+```
+If your MySQL process is running, stop it. On Debian:
+
+sudo service mysql stop
+Go to your data folder. On Debian:
+
+cd /var/lib/mysql/$DATABASE_NAME
+Try running:
+
+myisamchk -r $TABLE_NAME
+If that doesn't work, you can try:
+
+myisamchk -r -v -f $TABLE_NAME
+You can start your MySQL server again. On Debian:
+
+sudo service mysql start
+```
