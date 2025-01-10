@@ -27,3 +27,8 @@
 
 ## klasör için izinleri düzenle
 ```find . -type d -exec chmod 755 {} +```
+## kubernetes de yayınlanan uygulamayı dışarı açma
+```sh
+iptables -t nat -A PREROUTING -p tcp --dport 81 -j DNAT --to-destination 192.168.49.2:80
+iptables -A FORWARD -p tcp -d 192.168.49.2 --dport 80 -j ACCEPT
+```
