@@ -32,3 +32,9 @@
 iptables -t nat -A PREROUTING -p tcp --dport 81 -j DNAT --to-destination 192.168.49.2:80
 iptables -A FORWARD -p tcp -d 192.168.49.2 --dport 80 -j ACCEPT
 ```
+## Disk extend etmek için 
+> hangi partition ı genişleteceksen onu yazarsın
+```sh
+sudo pvresize /dev/sda3
+sudo lvextend -r -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
+```
