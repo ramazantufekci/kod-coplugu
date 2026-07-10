@@ -1,0 +1,2 @@
+#maili olan kullanıcılar 90 gündür giriş yapmıyorsa devredışı bırak ve ou ya taşı
+Get-ADUser -Filter {Enabled -eq $true -and Mail -like "*"} -Properties LastLogonDate, Mail|Where-object {$_.LastLogonDate -lt ((Get-Date).AddDays(-90)) -and $_.DistinguishedName -notmatch "(disable|olayacak|kullanıcılar|buraya)"}|%{Set-Aduser -Identity $_.DistinguishedName -Enabled $false; Move-ADObject -Identity $_.DistinguishedName -TargetPath "OU=DISABLE,DC=ramazan,DC=local"}
